@@ -14,25 +14,36 @@ body {
   background: #f5f7fa;
 }
 
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
 /* HERO */
 .hero {
+  margin-top: 60px;
   background: linear-gradient(135deg, #1f2937, #111827);
   color: white;
   padding: 100px 20px;
   text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-.hero h2 {
-  font-weight: 300;
-  opacity: 0.9;
-}
-
-.hero p {
-  margin-top: 15px;
 }
 
 .btn {
@@ -57,7 +68,6 @@ section {
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* GRID */
@@ -69,7 +79,7 @@ section {
 
 iframe {
   width: 100%;
-  border-radius: 10px;
+  height: 500px;
 }
 
 /* SKILLS */
@@ -93,16 +103,28 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+  <div>Bansi Patel</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#newsletter">Insights</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
 <!-- HERO -->
 <div class="hero">
   <h1>Bansi Patel</h1>
-  <h2>HR Manager | Organizational Development | Strategic HR</h2>
+  <h3>HR Manager | Organizational Development | Strategic HR</h3>
   <p>Driving organizational growth through people and culture.</p>
   <a href="#contact" class="btn">Contact Me</a>
 </div>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
   <h2>About Me</h2>
   <div class="card">
     Experienced HR professional with 4+ years of driving business growth through strategic HR, talent development, and employee engagement.
@@ -110,7 +132,7 @@ footer {
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="card skills">
     <span>Onboarding</span>
@@ -125,13 +147,11 @@ footer {
 <section id="newsletter">
   <h2>Newsletter & Insights</h2>
   <div class="grid">
-
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7409568702180028416"></iframe>
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7410194277294669825"></iframe>
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7420704178110423040"></iframe>
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7435651908184436736"></iframe>
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7447314860486475776"></iframe>
-
   </div>
 </section>
 
@@ -139,10 +159,8 @@ footer {
 <section>
   <h2>LinkedIn Highlights</h2>
   <div class="grid">
-
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7444933668391006208"></iframe>
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7439723051598123009"></iframe>
-
   </div>
 </section>
 
