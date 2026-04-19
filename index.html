@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bansi Patel — HR Manager & People Strategist</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HERO ── */
+.hero {
+  background:linear-gradient(135deg, var(--navy) 0%, #1d3f60 55%, #1a4a72 100%);
+  position:relative; overflow:hidden;
+  min-height:85vh; display:flex; align-items:center;
+}
+.hero-shapes {
+  position:absolute; inset:0; pointer-events:none; overflow:hidden;
+}
+.hero-shapes::before {
+  content:''; position:absolute;
+  right:-8%; top:-15%; width:55%; height:130%;
+  background:rgba(232,97,44,.07);
+  clip-path:polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.hero-shapes::after {
+  content:''; position:absolute;
+  left:40%; bottom:-60px; width:520px; height:520px;
+  border-radius:50%; border:1px solid rgba(255,255,255,.04);
+}
+.hero-circle {
+  position:absolute; right:6%; top:50%; transform:translateY(-50%);
+  width:420px; height:420px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+  display:flex; align-items:center; justify-content:center;
+}
+.hero-circle::before {
+  content:''; width:320px; height:320px; border-radius:50%;
+  border:1px solid rgba(232,97,44,.12);
+  position:absolute;
+}
+.hero-circle-inner {
+  width:220px; height:220px; border-radius:50%;
+  background:rgba(232,97,44,.1);
+  display:flex; align-items:center; justify-content:center;
+  font-size:5rem;
+  position:relative; z-index:1;
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+
+.hero-inner {
+  max-width:1200px; margin:0 auto; width:100%;
+  padding:100px 48px;
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:64px; align-items:center; position:relative; z-index:2;
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(232,97,44,.2); border:1px solid rgba(232,97,44,.35);
+  color:rgba(255,255,255,.9);
+  font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:6px 14px; border-radius:100px; margin-bottom:22px;
+}
+.badge-pulse { width:7px; height:7px; border-radius:50%; background:var(--orange); animation:pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.7);} }
+
+h1.hero-title {
+  font-family:'Merriweather', serif;
+  font-size:clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight:700; line-height:1.18;
+  color:var(--white); letter-spacing:-.015em; margin-bottom:22px;
+}
+h1.hero-title .highlight { color:var(--orange); }
+h1.hero-title em { font-style:italic; font-weight:300; opacity:.8; }
+
+.hero-sub {
+  font-size:1.05rem; color:rgba(255,255,255,.62);
+  line-height:1.78; margin-bottom:38px; font-weight:300; max-width:460px;
+}
+.hero-sub strong { color:rgba(255,255,255,.88); font-weight:600; }
+.hero-btns { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:48px; }
+.hero-stats {
+  display:flex; gap:0;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:32px;
+}
+.hstat { padding-right:36px; margin-right:36px; border-right:1px solid rgba(255,255,255,.08); }
+.hstat:last-child { border-right:none; }
+.hstat-n {
+  font-family:'Merriweather', serif;
+  font-size:2.2rem; font-weight:700; color:var(--white); line-height:1;
+}
+.hstat-n sup { font-size:1rem; color:var(--orange); }
+.hstat-l { font-size:.72rem; color:rgba(255,255,255,.45); text-transform:uppercase; letter-spacing:.07em; margin-top:5px; }
+
+/* right side info card */
+.hero-info-card {
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius-lg);
+  padding:32px; backdrop-filter:blur(12px);
+}
+.hic-title { font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:20px; }
+.hic-row {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:14px 0; border-bottom:1px solid rgba(255,255,255,.06);
+}
+.hic-row:last-child { border-bottom:none; }
+.hic-icon {
+  width:38px; height:38px; border-radius:var(--radius); flex-shrink:0;
+  background:rgba(232,97,44,.15);
+  display:flex; align-items:center; justify-content:center; font-size:.95rem;
+}
+.hic-lbl { font-size:.72rem; color:rgba(255,255,255,.4); margin-bottom:3px; letter-spacing:.04em; }
+.hic-val { font-size:.9rem; font-weight:600; color:rgba(255,255,255,.88); }
+
+/* ── TRUST PILLS ── */
+.trust-bar {
+  background:var(--gray-50);
+  border-top:1px solid var(--gray-200);
+  border-bottom:1px solid var(--gray-200);
+  padding:18px 48px;
+}
+.trust-inner {
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+}
+.trust-lbl { font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--text-lt); white-space:nowrap; }
+.trust-pills { display:flex; gap:10px; flex-wrap:wrap; }
+.tpill {
+  display:flex; align-items:center; gap:7px;
+  background:var(--white); border:1px solid var(--gray-200);
+  padding:6px 15px; border-radius:100px;
+  font-size:.8rem; font-weight:600; color:var(--navy);
+  box-shadow:var(--shadow-sm);
+}
+.tpill-dot { width:6px; height:6px; border-radius:50%; background:var(--orange); }
+
+/* ── WHAT I DO ── */
+.what-grid {
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:24px; margin-top:48px;
+}
+.what-card {
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:32px;
+  box-shadow:var(--shadow-sm);
+  transition:all .3s; position:relative; overflow:hidden;
+}
+.what-card::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--orange), var(--navy));
+  transform:scaleX(0); transform-origin:left; transition:transform .35s;
+}
+.what-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+.what-card:hover::after { transform:scaleX(1); }
+.what-icon {
+  width:54px; height:54px; border-radius:12px;
+  background:var(--navy-pale);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.5rem; margin-bottom:20px;
+}
+.what-title { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:10px; }
+.what-desc { font-size:.88rem; color:var(--text-md); line-height:1.7; }
+
+/* ── METRICS ── */
+.metrics-band { background:var(--navy); padding:52px 48px; }
+.metrics-inner {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+}
+.metric-col {
+  text-align:center; padding:16px 24px;
+  border-right:1px solid rgba(255,255,255,.07);
+}
+.metric-col:last-child { border-right:none; }
+.metric-num {
+  font-family:'Merriweather', serif;
+  font-size:2.6rem; font-weight:700; color:var(--white); line-height:1;
+}
+.metric-num sup { font-size:1.1rem; color:var(--orange); }
+.metric-lbl { font-size:.72rem; color:rgba(255,255,255,.4); text-transform:uppercase; letter-spacing:.08em; margin-top:8px; }
+.metric-bar { width:40px; height:2px; background:var(--orange); margin:12px auto 0; border-radius:1px; }
+
+/* ── LATEST ── */
+.latest-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:48px; }
+.latest-card {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg); padding:28px;
+  box-shadow:var(--shadow-sm); transition:all .3s;
+  display:flex; gap:20px; align-items:flex-start;
+}
+.latest-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.latest-icon {
+  width:48px; height:48px; flex-shrink:0; border-radius:10px;
+  background:var(--orange-pale); display:flex; align-items:center; justify-content:center;
+  font-size:1.3rem;
+}
+.latest-tag { font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--orange); margin-bottom:6px; }
+.latest-title { font-size:.95rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+.latest-desc { font-size:.83rem; color:var(--text-md); line-height:1.6; }
+.latest-link { font-size:.8rem; font-weight:700; color:var(--navy); display:inline-flex; align-items:center; gap:4px; margin-top:10px; transition:gap .2s, color .2s; }
+.latest-link:hover { color:var(--orange); gap:8px; }
+
+/* ── CTA STRIP ── */
+.cta-strip {
+  background:linear-gradient(135deg, var(--orange) 0%, #d14e1e 100%);
+  padding:60px 48px; text-align:center;
+}
+.cta-strip h2 {
+  font-family:'Merriweather', serif;
+  font-size:clamp(1.6rem, 3vw, 2.2rem);
+  font-weight:700; color:var(--white); margin-bottom:14px;
+}
+.cta-strip p { font-size:1rem; color:rgba(255,255,255,.78); margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto; }
+.btn-white-solid {
+  background:var(--white); color:var(--orange);
+  padding:14px 34px; border-radius:var(--radius);
+  font-size:.9rem; font-weight:700;
+  display:inline-flex; align-items:center; gap:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,.2); transition:all .25s;
+}
+.btn-white-solid:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.3); }
+
+@media(max-width:860px){
+  .hero-inner { grid-template-columns:1fr; padding:80px 20px; }
+  .hero-info-card { display:none; }
+  .hero-circle { display:none; }
+  .what-grid { grid-template-columns:1fr; }
+  .metrics-inner { grid-template-columns:repeat(2,1fr); }
+  .latest-grid { grid-template-columns:1fr; }
+  .trust-bar { padding:14px 20px; }
+  .metrics-band { padding:40px 20px; }
+  .cta-strip { padding:48px 20px; }
+  .hero-stats { flex-direction:column; gap:16px; }
+  .hstat { border-right:none; border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:16px; padding-right:0; margin-right:0; }
+  .hstat:last-child { border-bottom:none; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-shapes"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="badge-pulse"></span>HR Manager &amp; People Strategist</div>
+      <h1 class="hero-title">
+        Helping companies<br>
+        <span class="highlight">reduce attrition</span><br>
+        &amp; build <em>high-performance teams</em>
+      </h1>
+      <p class="hero-sub">
+        Through <strong>strategic HR leadership</strong> with 4+ years of experience — because when people thrive, organizations grow.
+      </p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-primary">✉ Get In Touch</a>
+        <a href="about.html" class="btn-outline">Learn More About Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-n">4<sup>+</sup></div><div class="hstat-l">Years Experience</div></div>
+        <div class="hstat"><div class="hstat-n">8<sup>+</sup></div><div class="hstat-l">Competencies</div></div>
+        <div class="hstat"><div class="hstat-n">5<sup>+</sup></div><div class="hstat-l">Newsletters</div></div>
+      </div>
+    </div>
+    <div class="hero-info-card sr-r">
+      <div class="hic-title">Professional Profile</div>
+      <div class="hic-row"><div class="hic-icon">🎯</div><div><div class="hic-lbl">Current Role</div><div class="hic-val">HR Manager</div></div></div>
+      <div class="hic-row"><div class="hic-icon">🏗</div><div><div class="hic-lbl">Specialization</div><div class="hic-val">Organizational Development</div></div></div>
+      <div class="hic-row"><div class="hic-icon">📍</div><div><div class="hic-lbl">Location</div><div class="hic-val">Ahmedabad, Gujarat, India</div></div></div>
+      <div class="hic-row"><div class="hic-icon">✉</div><div><div class="hic-lbl">Email</div><div class="hic-val">hrrecruiter.b07@gmail.com</div></div></div>
+      <div class="hic-row"><div class="hic-icon">🔗</div><div><div class="hic-lbl">LinkedIn</div><div class="hic-val">bansi-patel-hr</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-lbl">Expertise in</span>
+    <div class="trust-pills">
+      <span class="tpill"><span class="tpill-dot"></span>Talent Development</span>
+      <span class="tpill"><span class="tpill-dot"></span>Employee Engagement</span>
+      <span class="tpill"><span class="tpill-dot"></span>Performance Management</span>
+      <span class="tpill"><span class="tpill-dot"></span>Organizational Development</span>
+      <span class="tpill"><span class="tpill-dot"></span>HR Policy Design</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT I DO -->
+<section class="section" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="sr">
+      <div class="sec-label">What I Do</div>
+      <h2 class="sec-h2">Strategic HR That <em>Drives Results</em></h2>
+      <p class="sec-desc">Bridging the gap between people and organizational goals through targeted HR strategies and culture initiatives.</p>
+    </div>
+    <div class="what-grid">
+      <div class="what-card sr d1">
+        <div class="what-icon">🎯</div>
+        <div class="what-title">Strategic HR Planning</div>
+        <p class="what-desc">Aligning HR strategies with business goals to drive sustainable growth, reduce attrition, and build competitive advantage through people.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+      <div class="what-card sr d2">
+        <div class="what-icon">🌱</div>
+        <div class="what-title">Talent Development</div>
+        <p class="what-desc">Designing and implementing programs that nurture talent, accelerate career growth, and build leadership pipelines for the future of work.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+      <div class="what-card sr d3">
+        <div class="what-icon">🤝</div>
+        <div class="what-title">Culture &amp; Engagement</div>
+        <p class="what-desc">Creating psychologically safe, inclusive workplaces where employees feel valued, engaged, and empowered to perform at their best.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+      <div class="what-card sr d1">
+        <div class="what-icon">📊</div>
+        <div class="what-title">Performance Management</div>
+        <p class="what-desc">Building transparent, data-driven performance frameworks that motivate people, reward contribution, and align individuals with organizational objectives.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+      <div class="what-card sr d2">
+        <div class="what-icon">🏗</div>
+        <div class="what-title">Organizational Development</div>
+        <p class="what-desc">Diagnosing organizational needs and implementing interventions that strengthen structure, streamline processes, and scale capability effectively.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+      <div class="what-card sr d3">
+        <div class="what-icon">📋</div>
+        <div class="what-title">HR Policy &amp; Compliance</div>
+        <p class="what-desc">Crafting HR policies that are fair, legally compliant, and reflect the organization's culture and values — building trust across all levels.</p>
+        <a href="skills.html" class="latest-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<div class="metrics-band">
+  <div class="metrics-inner">
+    <div class="metric-col sr d1"><div class="metric-num">4<sup>+</sup></div><div class="metric-lbl">Years of Strategic HR</div><div class="metric-bar"></div></div>
+    <div class="metric-col sr d2"><div class="metric-num">8<sup>+</sup></div><div class="metric-lbl">Core Competencies</div><div class="metric-bar"></div></div>
+    <div class="metric-col sr d3"><div class="metric-num">100<sup>%</sup></div><div class="metric-lbl">People-Centered Approach</div><div class="metric-bar"></div></div>
+    <div class="metric-col sr d4"><div class="metric-num">5<sup>+</sup></div><div class="metric-lbl">Newsletters Published</div><div class="metric-bar"></div></div>
+  </div>
+</div>
+
+<!-- LATEST UPDATES -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0;">
+      <div class="sr">
+        <div class="sec-label">Latest</div>
+        <h2 class="sec-h2">Recent Posts &amp; <em>Newsletters</em></h2>
+      </div>
+      <a href="posts.html" class="btn-outline sr d2" style="align-self:flex-end">View All Posts</a>
+    </div>
+    <div class="latest-grid">
+      <div class="latest-card sr d1">
+        <div class="latest-icon">📌</div>
+        <div>
+          <div class="latest-tag">LinkedIn Post</div>
+          <div class="latest-title">Career Growth &amp; Leadership in the Modern Workplace</div>
+          <p class="latest-desc">Insights on navigating career progression, building leadership presence, and making a lasting impact in today's fast-evolving HR landscape.</p>
+          <a href="posts.html" class="latest-link">Read on LinkedIn →</a>
+        </div>
+      </div>
+      <div class="latest-card sr d2">
+        <div class="latest-icon">📰</div>
+        <div>
+          <div class="latest-tag">Newsletter</div>
+          <div class="latest-title">Hiring the Right Talent in a Competitive Job Market</div>
+          <p class="latest-desc">Strategies for identifying, attracting and retaining top talent when the market is tight — a deep dive into modern recruitment practices.</p>
+          <a href="newsletter.html" class="latest-link">Read Newsletter →</a>
+        </div>
+      </div>
+      <div class="latest-card sr d3">
+        <div class="latest-icon">📌</div>
+        <div>
+          <div class="latest-tag">LinkedIn Post</div>
+          <div class="latest-title">The Future of HR Strategy &amp; Leadership</div>
+          <p class="latest-desc">How HR leaders can position themselves at the strategic table and become genuine business partners, not just support functions.</p>
+          <a href="posts.html" class="latest-link">Read on LinkedIn →</a>
+        </div>
+      </div>
+      <div class="latest-card sr d4">
+        <div class="latest-icon">📰</div>
+        <div>
+          <div class="latest-tag">Newsletter</div>
+          <div class="latest-title">Workforce Transformation — A Strategic Necessity</div>
+          <p class="latest-desc">Workforce transformation is no longer optional. A comprehensive guide to aligning talent architecture with business growth objectives.</p>
+          <a href="newsletter.html" class="latest-link">Read Newsletter →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2>Ready to Build Something Great Together?</h2>
+  <p>Let's connect and discuss how strategic HR can transform your organization's performance and culture.</p>
+  <a href="contact.html" class="btn-white-solid">✉ Get In Touch</a>
+</div>
+
+</main>
+<script src="shared.js"></script>
+</body>
+</html>
