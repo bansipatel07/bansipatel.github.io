@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.posts-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:20px; }
+.posts-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.post-card { background:#fff; border:1px solid var(--g200); border-radius:var(--radius-lg); overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 8px rgba(27,58,92,.06); transition:transform .35s, box-shadow .35s; }
+.post-card:hover { transform:translateY(-7px); box-shadow:0 22px 52px rgba(27,58,92,.15); }
+.post-card-bar { height:3px; background:linear-gradient(90deg, var(--navy), var(--steel)); }
+.post-card-head { padding:14px 18px 0; }
+.post-badge { font-size:.67rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); background:var(--navy-pale); padding:4px 10px; border-radius:4px; display:inline-block; }
+.post-card iframe { width:100%; border:none; display:block; }
+.post-card-foot { padding:14px 18px; border-top:1px solid var(--g100); margin-top:auto; display:flex; justify-content:space-between; align-items:center; }
+.post-link { font-size:.8rem; font-weight:700; color:var(--navy); display:inline-flex; align-items:center; gap:5px; text-decoration:none; transition:gap .2s, color .2s; }
+.post-link:hover { color:var(--navy-mid); gap:9px; }
+.post-featured { background:var(--navy); border-radius:var(--radius-lg); padding:36px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; box-shadow:0 2px 8px rgba(27,58,92,.06); }
+.post-featured::before { content:'"'; font-family:'Merriweather',serif; font-size:9rem; color:rgba(255,255,255,.05); position:absolute; top:-15px; left:14px; line-height:1; pointer-events:none; }
+.pf-tag { font-size:.67rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--steel); background:rgba(91,155,213,.15); padding:4px 10px; border-radius:4px; display:inline-block; margin-bottom:16px; }
+.pf-quote { font-family:'Merriweather',serif; font-size:1.05rem; font-style:italic; color:#fff; line-height:1.65; position:relative; z-index:1; margin-bottom:16px; }
+.pf-cite { font-size:.77rem; color:rgba(255,255,255,.38); }
+.connect-strip { background:var(--g50); border:1px solid var(--g200); border-radius:var(--radius-lg); padding:32px 36px; display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:40px; flex-wrap:wrap; }
+.cs-title { font-family:'Merriweather',serif; font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:5px; }
+.cs-desc { font-size:.88rem; color:var(--text-md); max-width:480px; line-height:1.65; }
+
+@media(max-width:960px) { .posts-grid { grid-template-columns:1fr; } .connect-strip { flex-direction:column; } }
+</style>
+</head>
+<body>
+<main>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Posts</div>
+    <h1>Featured <em>Posts</em></h1>
+    <p>Perspectives on HR leadership, workplace culture, and the future of work — shared with the professional community.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="posts-header">
+      <div data-reveal="left">
+        <div class="sec-label">LinkedIn Posts</div>
+        <h2 class="sec-h2">Thoughts &amp; <em>Insights</em></h2>
+        <p class="sec-desc">Sharing actionable HR insights and leadership perspectives with a growing professional community.</p>
+      </div>
+      <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-navy" data-reveal="right" style="align-self:flex-end">Follow on LinkedIn</a>
+    </div>
+
+    <div class="posts-grid">
+      <div class="post-card" data-reveal="up" data-delay="1">
+        <div class="post-card-bar"></div>
+        <div class="post-card-head"><span class="post-badge">Career Growth &amp; Leadership</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7444933668391006208?collapsed=1" height="300" frameborder="0" allowfullscreen title="Post 1"></iframe>
+        <div class="post-card-foot"><a href="https://www.linkedin.com/posts/bansi-patel-hr_careergrowth-leadership-futureofwork-activity-7442061404737802240-MdCr" target="_blank" class="post-link">Read on LinkedIn →</a></div>
+      </div>
+
+      <div class="post-card" data-reveal="up" data-delay="2">
+        <div class="post-card-bar"></div>
+        <div class="post-card-head"><span class="post-badge">HR Strategy &amp; Future of HR</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7439723051598123009?collapsed=1" height="300" frameborder="0" allowfullscreen title="Post 2"></iframe>
+        <div class="post-card-foot"><a href="https://www.linkedin.com/posts/bansi-patel-hr_hrleadership-futureofhr-hrstrategy-activity-7439513359970033664-4Oov" target="_blank" class="post-link">Read on LinkedIn →</a></div>
+      </div>
+
+      <div class="post-featured" data-reveal="up" data-delay="3">
+        <span class="pf-tag">HR Philosophy</span>
+        <p class="pf-quote">"The best HR professionals don't just manage people — they create the conditions for people to manage themselves at their very best."</p>
+        <span class="pf-cite">Bansi Patel · People &amp; Culture</span>
+      </div>
+    </div>
+
+    <div class="connect-strip" data-reveal="up">
+      <div>
+        <div class="cs-title">Follow for More HR Insights</div>
+        <p class="cs-desc">Connect on LinkedIn to stay updated with the latest posts on HR strategy, workplace culture, leadership development, and the future of work.</p>
+      </div>
+      <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-navy">Follow on LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+<script src="shared.js"></script>
+</body>
+</html>

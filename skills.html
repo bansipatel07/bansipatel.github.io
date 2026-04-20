@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.skills-layout { display:grid; grid-template-columns:260px 1fr; gap:60px; align-items:start; }
+.skills-sidebar { position:sticky; top:88px; }
+.sidebar-quote { background:var(--navy); border-radius:var(--radius-lg); padding:28px; margin-top:22px; }
+.sidebar-quote p { font-family:'Merriweather',serif; font-style:italic; font-size:.93rem; color:rgba(255,255,255,.75); line-height:1.65; }
+.sidebar-quote cite { display:block; margin-top:14px; font-size:.7rem; color:rgba(255,255,255,.35); font-style:normal; letter-spacing:.07em; text-transform:uppercase; }
+.skills-content { display:flex; flex-direction:column; gap:48px; }
+.sg-head { display:flex; align-items:center; gap:12px; padding-bottom:12px; border-bottom:2px solid var(--g100); margin-bottom:16px; }
+.sg-ico { font-size:1.3rem; }
+.sg-title { font-size:.95rem; font-weight:700; color:var(--navy); }
+.sg-count { margin-left:auto; font-size:.72rem; font-weight:700; color:var(--text-lt); background:var(--g100); padding:3px 10px; border-radius:100px; }
+.sk-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.sk-card { background:#fff; border:1px solid var(--g200); border-radius:var(--radius); padding:18px; box-shadow:0 2px 6px rgba(27,58,92,.05); transition:transform .3s, box-shadow .3s; position:relative; overflow:hidden; }
+.sk-card::after { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--navy); transform:scaleY(0); transform-origin:bottom; transition:transform .32s; }
+.sk-card:hover { transform:translateX(5px); box-shadow:0 6px 20px rgba(27,58,92,.1); }
+.sk-card:hover::after { transform:scaleY(1); }
+.sk-name { font-size:.88rem; font-weight:700; color:var(--navy); margin-bottom:5px; display:flex; align-items:center; gap:7px; }
+.sk-dot { width:5px; height:5px; border-radius:50%; background:var(--steel); flex-shrink:0; }
+.sk-desc { font-size:.81rem; color:var(--text-md); line-height:1.6; }
+.exp-band { background:var(--navy); border-radius:var(--radius-lg); padding:36px 40px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.eb-item { text-align:center; padding:0 16px; border-right:1px solid rgba(255,255,255,.08); }
+.eb-item:last-child { border-right:none; }
+.eb-num { font-family:'Merriweather',serif; font-size:2.2rem; font-weight:700; color:#fff; line-height:1; }
+.eb-num sup { font-size:1rem; color:var(--steel); }
+.eb-lbl { font-size:.7rem; color:rgba(255,255,255,.38); text-transform:uppercase; letter-spacing:.08em; margin-top:8px; }
+
+@media(max-width:960px) {
+  .skills-layout { grid-template-columns:1fr; }
+  .skills-sidebar { position:static; }
+  .sk-grid { grid-template-columns:1fr; }
+  .exp-band { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:480px){ .exp-band { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Skills</div>
+    <h1>Skills &amp; <em>Expertise</em></h1>
+    <p>A comprehensive blend of strategic HR thinking and hands-on execution across the full employee lifecycle.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="skills-layout">
+      <div class="skills-sidebar" data-reveal="left">
+        <div class="sec-label">Competencies</div>
+        <h2 class="sec-h2">Core HR <em>Skills</em></h2>
+        <p class="sec-desc">Built over 4+ years of strategic HR practice across talent, culture, and organizational development.</p>
+        <div class="sidebar-quote">
+          <p>"HR is not just about managing people — it's about architecting the human experience inside an organization."</p>
+          <cite>Bansi Patel · HR Manager</cite>
+        </div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+          <a href="contact.html" class="btn btn-navy">Collaborate With Me</a>
+          <a href="about.html"   class="btn btn-outline">Learn About Me</a>
+        </div>
+      </div>
+
+      <div class="skills-content" data-reveal="right">
+        <!-- Group 1 -->
+        <div>
+          <div class="sg-head"><span class="sg-ico">👥</span><span class="sg-title">People &amp; Talent Management</span><span class="sg-count">6 skills</span></div>
+          <div class="sk-grid">
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>Talent Acquisition</div><p class="sk-desc">End-to-end recruitment — sourcing, interviewing, and onboarding the right talent at the right time for the right role.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="2"><div class="sk-name"><span class="sk-dot"></span>Onboarding &amp; Integration</div><p class="sk-desc">Designing structured onboarding journeys that accelerate new-hire productivity and sense of belonging.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="3"><div class="sk-name"><span class="sk-dot"></span>Employee Engagement</div><p class="sk-desc">Creating feedback mechanisms and recognition programs that measurably boost engagement scores.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="4"><div class="sk-name"><span class="sk-dot"></span>Attrition Management</div><p class="sk-desc">Identifying retention risks and deploying targeted interventions to reduce employee churn.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>Succession Planning</div><p class="sk-desc">Building talent pipelines that ensure business continuity and readiness for future leadership needs.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="2"><div class="sk-name"><span class="sk-dot"></span>Workforce Planning</div><p class="sk-desc">Forecasting talent needs aligned with business growth strategy and long-term organizational vision.</p></div>
+          </div>
+        </div>
+        <!-- Group 2 -->
+        <div>
+          <div class="sg-head"><span class="sg-ico">🎯</span><span class="sg-title">Strategy &amp; Leadership Development</span><span class="sg-count">6 skills</span></div>
+          <div class="sk-grid">
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>Performance Management</div><p class="sk-desc">Building goal-setting, review, and feedback frameworks that drive high performance and accountability.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="2"><div class="sk-name"><span class="sk-dot"></span>Leadership Development</div><p class="sk-desc">Designing programs that develop current and future leaders with skills to inspire, adapt, and grow their teams.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="3"><div class="sk-name"><span class="sk-dot"></span>Organizational Development</div><p class="sk-desc">Diagnosing and improving organizational structures and capabilities to scale effectively and sustainably.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="4"><div class="sk-name"><span class="sk-dot"></span>Change Management</div><p class="sk-desc">Leading people through organizational transitions with clarity, empathy, and structured support.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>HR Policy Design</div><p class="sk-desc">Crafting fair, legally compliant, and culture-aligned policies that build organizational trust at every level.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="2"><div class="sk-name"><span class="sk-dot"></span>Strategic HR Planning</div><p class="sk-desc">Translating business strategy into actionable people roadmaps with measurable outcomes and clear accountabilities.</p></div>
+          </div>
+        </div>
+        <!-- Group 3 -->
+        <div>
+          <div class="sg-head"><span class="sg-ico">🌍</span><span class="sg-title">Culture, Compliance &amp; Analytics</span><span class="sg-count">5 skills</span></div>
+          <div class="sk-grid">
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>Workplace Culture</div><p class="sk-desc">Intentionally shaping culture through rituals, norms, and leadership behaviors that reflect organizational values.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="2"><div class="sk-name"><span class="sk-dot"></span>Diversity &amp; Inclusion</div><p class="sk-desc">Building equitable hiring practices and belonging programs that honor every voice in the workplace.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="3"><div class="sk-name"><span class="sk-dot"></span>Employee Relations</div><p class="sk-desc">Managing workplace conflicts and disciplinary matters with fairness, empathy, and legal compliance.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="4"><div class="sk-name"><span class="sk-dot"></span>HR Analytics</div><p class="sk-desc">Using workforce data to measure HR effectiveness, track KPIs, and make evidence-based strategic decisions.</p></div>
+            <div class="sk-card" data-reveal="up" data-delay="1"><div class="sk-name"><span class="sk-dot"></span>HRIS Systems</div><p class="sk-desc">Proficient in HRIS platforms for workforce management, people data reporting, and operational HR efficiency.</p></div>
+          </div>
+        </div>
+        <!-- Expertise band -->
+        <div class="exp-band" data-reveal="scale">
+          <div class="eb-item"><div class="eb-num">4<sup>+</sup></div><div class="eb-lbl">Years of HR Practice</div></div>
+          <div class="eb-item"><div class="eb-num">17<sup>+</sup></div><div class="eb-lbl">Skills Across 3 Domains</div></div>
+          <div class="eb-item"><div class="eb-num">100<sup>%</sup></div><div class="eb-lbl">People-Centered</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script src="shared.js"></script>
+</body>
+</html>

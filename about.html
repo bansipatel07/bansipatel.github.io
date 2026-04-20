@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid { display:grid; grid-template-columns:280px 1fr; gap:72px; align-items:start; }
+.about-photo { background:linear-gradient(145deg,var(--navy-pale),var(--g100)); border-radius:var(--radius-lg); aspect-ratio:4/5; display:flex; align-items:center; justify-content:center; font-size:5rem; border:1px solid var(--g200); box-shadow:0 8px 32px rgba(27,58,92,.1); position:relative; }
+.about-badge { position:absolute; bottom:-16px; right:-16px; background:var(--navy); border-radius:10px; padding:16px 20px; box-shadow:0 8px 24px rgba(27,58,92,.25); }
+.ab-num { font-family:'Merriweather',serif; font-size:1.8rem; font-weight:700; color:#fff; line-height:1; }
+.ab-num sup { font-size:.9rem; color:var(--steel); }
+.ab-lbl { font-size:.68rem; color:rgba(255,255,255,.4); text-transform:uppercase; letter-spacing:.06em; margin-top:3px; }
+.about-body p { font-size:.97rem; color:var(--text-md); line-height:1.85; margin-bottom:18px; }
+.about-body p strong { color:var(--text); font-weight:600; }
+.about-quote { margin:22px 0; padding:20px 24px; border-left:4px solid var(--navy); background:var(--g50); border-radius:0 8px 8px 0; }
+.about-quote p { font-family:'Merriweather',serif; font-size:1.05rem; font-style:italic; color:var(--navy); line-height:1.6; }
+.about-btns { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+
+/* strengths */
+.strengths-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:48px; }
+.strength-card { background:#fff; border:1px solid var(--g200); border-radius:var(--radius-lg); padding:26px; box-shadow:0 2px 8px rgba(27,58,92,.05); position:relative; overflow:hidden; transition:transform .3s, box-shadow .3s; }
+.strength-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--navy); transform:scaleX(0); transform-origin:left; transition:transform .38s; }
+.strength-card:hover { transform:translateY(-5px); box-shadow:0 14px 36px rgba(27,58,92,.12); }
+.strength-card:hover::before { transform:scaleX(1); }
+.sc-ico { font-size:1.6rem; margin-bottom:12px; }
+.sc-title { font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+.sc-desc { font-size:.83rem; color:var(--text-md); line-height:1.65; }
+
+/* journey — simple recruiter → HR Manager */
+.journey-section { display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+.journey-track {
+  display:flex; flex-direction:column; align-items:center; gap:0;
+  margin-top:32px; position:relative;
+}
+.journey-track::before {
+  content:''; position:absolute; left:50%; transform:translateX(-50%);
+  top:40px; bottom:40px; width:2px;
+  background:linear-gradient(to bottom, var(--navy), var(--steel));
+  border-radius:1px;
+}
+.jstep {
+  display:flex; flex-direction:column; align-items:center;
+  position:relative; z-index:1; width:100%;
+}
+.jstep-node {
+  width:56px; height:56px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.3rem;
+  box-shadow:0 4px 16px rgba(27,58,92,.18);
+  border:3px solid #fff;
+}
+.jstep-node.start { background:var(--g100); }
+.jstep-node.end   { background:var(--navy); }
+.jstep-connector  { width:2px; height:64px; background:transparent; }
+.jstep-label {
+  margin-top:10px; text-align:center;
+  padding:14px 22px; border-radius:var(--radius);
+  width:100%; max-width:260px;
+}
+.jstep-label.start-lbl { background:var(--g50); border:1px solid var(--g200); }
+.jstep-label.end-lbl   { background:var(--navy); box-shadow:0 4px 18px rgba(27,58,92,.25); }
+.jl-role { font-size:.93rem; font-weight:700; color:var(--navy); margin-bottom:3px; }
+.jl-role.light { color:#fff; }
+.jl-desc { font-size:.8rem; color:var(--text-md); line-height:1.5; }
+.jl-desc.light { color:rgba(255,255,255,.58); }
+.journey-arrow {
+  font-size:1.8rem; color:var(--navy); margin:6px 0;
+  animation:arrowBounce 1.6s ease-in-out infinite;
+}
+@keyframes arrowBounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(6px);} }
+
+/* values */
+.value-list { display:flex; flex-direction:column; gap:12px; }
+.val-item { padding:16px 20px; border-left:3px solid var(--navy); background:var(--g50); border-radius:0 8px 8px 0; transition:transform .25s, box-shadow .25s; }
+.val-item.alt { border-left-color:var(--steel); background:var(--navy-pale); }
+.val-item:hover { transform:translateX(5px); box-shadow:0 4px 16px rgba(27,58,92,.08); }
+.val-title { font-size:.88rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+.val-desc  { font-size:.82rem; color:var(--text-md); line-height:1.6; }
+
+@media(max-width:960px){
+  .about-grid { grid-template-columns:1fr; gap:40px; }
+  .about-photo { max-width:280px; }
+  .strengths-grid { grid-template-columns:1fr; }
+  .journey-section { grid-template-columns:1fr; gap:48px; }
+}
+</style>
+</head>
+<body>
+<main>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>About</div>
+    <h1>About <em>Bansi Patel</em></h1>
+    <p>HR Manager · Organizational Development · Strategic HR · People &amp; Culture</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div data-reveal="left">
+        <div class="about-photo">👩‍💼
+          <div class="about-badge"><div class="ab-num">4<sup>+</sup></div><div class="ab-lbl">Years HR Experience</div></div>
+        </div>
+      </div>
+      <div data-reveal="right" class="about-body">
+        <div class="sec-label">About Me</div>
+        <h2 class="sec-h2">People-First <em>HR Leader</em></h2>
+        <p>As an <strong>experienced HR Professional with 4+ years</strong> of driving business growth through strategic Human Resource Management, I bring a holistic approach to building organizations from the inside out.</p>
+        <div class="about-quote"><p>"When you invest in people, you invest in the future of your entire organization."</p></div>
+        <p>Skilled in <strong>Talent Development, Employee Engagement, and Organizational Development</strong>, with a strong focus on aligning HR strategies with business goals. I specialize in building <strong>inclusive, high-performing workplace cultures</strong>, leveraging data-driven insights and HR best practices to implement impactful programs across talent management, employee relations, and performance optimization.</p>
+        <div class="about-btns">
+          <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-navy">View LinkedIn Profile</a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="section section-alt">
+  <div class="container">
+    <div data-reveal="up"><div class="sec-label">Core Strengths</div><h2 class="sec-h2">What Sets Me <em>Apart</em></h2></div>
+    <div class="strengths-grid">
+      <div class="strength-card" data-reveal="flip" data-delay="1"><div class="sc-ico">🎯</div><div class="sc-title">Strategic HR Alignment</div><p class="sc-desc">Bridging people strategy and business goals — translating vision into actionable HR programs that deliver measurable results.</p></div>
+      <div class="strength-card" data-reveal="flip" data-delay="2"><div class="sc-ico">🌱</div><div class="sc-title">Talent Development</div><p class="sc-desc">Designing learning ecosystems and leadership pipelines that nurture talent from hire to retire, creating a culture of continuous growth.</p></div>
+      <div class="strength-card" data-reveal="flip" data-delay="3"><div class="sc-ico">🤝</div><div class="sc-title">Culture &amp; Engagement</div><p class="sc-desc">Building psychologically safe, inclusive workplaces grounded in trust, transparency, and a genuine commitment to employee wellbeing.</p></div>
+      <div class="strength-card" data-reveal="flip" data-delay="4"><div class="sc-ico">📊</div><div class="sc-title">Data-Driven HR</div><p class="sc-desc">Moving from intuition-based to evidence-based HR decision making using analytics, engagement data, and workforce metrics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY + VALUES -->
+<section class="section">
+  <div class="container">
+    <div class="journey-section">
+      <div data-reveal="left">
+        <div class="sec-label">My Journey</div>
+        <h2 class="sec-h2">From Recruiter <em>to HR Manager</em></h2>
+        <p class="sec-desc" style="margin-bottom:32px">A career built on a genuine passion for people — growing from hands-on recruitment into strategic HR leadership over 4+ years.</p>
+        <div class="journey-track">
+          <div class="jstep">
+            <div class="jstep-node start">🔍</div>
+            <div class="jstep-label start-lbl">
+              <div class="jl-role">Recruiter</div>
+              <p class="jl-desc">Where it all began — sourcing, screening, and placing the right talent with a passion for people.</p>
+            </div>
+          </div>
+          <div class="journey-arrow">↓</div>
+          <div class="jstep">
+            <div class="jstep-node end">🏆</div>
+            <div class="jstep-label end-lbl">
+              <div class="jl-role light">HR Manager</div>
+              <p class="jl-desc light">Leading organizational development, culture, performance, and strategic people initiatives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <div class="sec-label">My Values</div>
+        <h2 class="sec-h2">What I <em>Believe In</em></h2>
+        <p class="sec-desc" style="margin-bottom:28px">The principles that guide every HR decision I make and every culture I help build.</p>
+        <div class="value-list">
+          <div class="val-item" data-reveal="up" data-delay="1"><div class="val-title">People Before Process</div><p class="val-desc">Policies and processes serve people — never the other way around. HR must remain human-centered at its core.</p></div>
+          <div class="val-item alt" data-reveal="up" data-delay="2"><div class="val-title">Inclusion is Non-Negotiable</div><p class="val-desc">Diverse teams outperform. Building inclusive workplaces is both an ethical and a business imperative.</p></div>
+          <div class="val-item" data-reveal="up" data-delay="3"><div class="val-title">Data Guides, Empathy Leads</div><p class="val-desc">Analytics tell us the what. Empathy tells us the why. Great HR professionals need both to make a lasting difference.</p></div>
+          <div class="val-item alt" data-reveal="up" data-delay="4"><div class="val-title">Continuous Learning</div><p class="val-desc">The best HR leaders never stop learning — about their people, their industry, and themselves.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script src="shared.js"></script>
+</body>
+</html>

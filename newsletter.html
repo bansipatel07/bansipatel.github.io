@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.nl-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:20px; }
+.nl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.nl-card { background:#fff; border:1px solid var(--g200); border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 2px 8px rgba(27,58,92,.06); transition:transform .35s, box-shadow .35s; }
+.nl-card:hover { transform:translateY(-6px); box-shadow:0 22px 52px rgba(27,58,92,.14); }
+.nl-card-head { background:var(--navy); padding:13px 18px; display:flex; align-items:center; gap:10px; }
+.nl-num { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.48); }
+.nl-ico { color:var(--steel); font-size:.9rem; }
+.nl-card iframe { width:100%; border:none; display:block; }
+.topics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.topic-card { background:#fff; border:1px solid var(--g200); border-radius:var(--radius-lg); padding:22px; text-align:center; transition:transform .3s, box-shadow .3s; }
+.topic-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(27,58,92,.11); }
+.tc-ico { font-size:1.6rem; margin-bottom:10px; }
+.tc-title { font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+.tc-desc { font-size:.82rem; color:var(--text-md); line-height:1.65; }
+
+@media(max-width:960px){ .nl-grid { grid-template-columns:1fr; } .topics-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:480px){ .topics-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Newsletter</div>
+    <h1>HR Insights <em>Newsletter</em></h1>
+    <p>In-depth newsletters on HR strategy, leadership trends, and organizational culture — crafted for forward-thinking professionals.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="nl-header">
+      <div data-reveal="left">
+        <div class="sec-label">Knowledge Hub</div>
+        <h2 class="sec-h2">Professional Insights <em>Newsletter</em></h2>
+        <p class="sec-desc">Practical, research-backed HR content covering topics that matter most to HR practitioners and business leaders.</p>
+      </div>
+      <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-navy" data-reveal="right" style="align-self:flex-end;white-space:nowrap">Follow for More</a>
+    </div>
+
+    <div class="nl-grid">
+      <div class="nl-card" data-reveal="up" data-delay="1">
+        <div class="nl-card-head"><span class="nl-ico">📰</span><span class="nl-num">Newsletter 01 · Talent Acquisition</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7409568702180028416?collapsed=1" height="320" frameborder="0" allowfullscreen title="Newsletter 1"></iframe>
+      </div>
+      <div class="nl-card" data-reveal="up" data-delay="2">
+        <div class="nl-card-head"><span class="nl-ico">📰</span><span class="nl-num">Newsletter 02 · Skills-Based Hiring</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7410194277294669825?collapsed=1" height="320" frameborder="0" allowfullscreen title="Newsletter 2"></iframe>
+      </div>
+      <div class="nl-card" data-reveal="up" data-delay="3">
+        <div class="nl-card-head"><span class="nl-ico">📰</span><span class="nl-num">Newsletter 03 · Path to Success</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7420704178110423040?collapsed=1" height="320" frameborder="0" allowfullscreen title="Newsletter 3"></iframe>
+      </div>
+      <div class="nl-card" data-reveal="up" data-delay="1">
+        <div class="nl-card-head"><span class="nl-ico">📰</span><span class="nl-num">Newsletter 04 · Workforce Transformation</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7435651908184436736?collapsed=1" height="320" frameborder="0" allowfullscreen title="Newsletter 4"></iframe>
+      </div>
+      <div class="nl-card" data-reveal="up" data-delay="2">
+        <div class="nl-card-head"><span class="nl-ico">📰</span><span class="nl-num">Newsletter 05 · Future of HR</span></div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7447314860486475776?collapsed=1" height="320" frameborder="0" allowfullscreen title="Newsletter 5"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div data-reveal="up"><div class="sec-label">What You'll Learn</div><h2 class="sec-h2" style="margin-bottom:32px">Topics Covered in <em>Each Edition</em></h2></div>
+    <div class="topics-grid">
+      <div class="topic-card" data-reveal="flip" data-delay="1"><div class="tc-ico">🎯</div><div class="tc-title">HR Strategy</div><p class="tc-desc">How HR professionals can become true strategic business partners and drive organizational performance.</p></div>
+      <div class="topic-card" data-reveal="flip" data-delay="2"><div class="tc-ico">🌱</div><div class="tc-title">Talent Management</div><p class="tc-desc">Practical frameworks for attracting, developing, and retaining the talent your organization needs to thrive.</p></div>
+      <div class="topic-card" data-reveal="flip" data-delay="3"><div class="tc-ico">🏆</div><div class="tc-title">Leadership Development</div><p class="tc-desc">Building leadership capability at every level — from frontline managers to senior executives.</p></div>
+      <div class="topic-card" data-reveal="flip" data-delay="1"><div class="tc-ico">🤝</div><div class="tc-title">Culture &amp; Engagement</div><p class="tc-desc">Proven approaches to measuring, shaping, and sustaining a high-engagement, high-performance culture.</p></div>
+      <div class="topic-card" data-reveal="flip" data-delay="2"><div class="tc-ico">📊</div><div class="tc-title">HR Analytics</div><p class="tc-desc">How to use data to tell compelling HR stories and make better decisions at the organizational level.</p></div>
+      <div class="topic-card" data-reveal="flip" data-delay="3"><div class="tc-ico">🔮</div><div class="tc-title">Future of Work</div><p class="tc-desc">Emerging trends shaping the workplace and how HR can lead organizations through change with confidence.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<script src="shared.js"></script>
+</body>
+</html>
