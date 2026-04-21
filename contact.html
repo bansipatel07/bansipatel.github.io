@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.clayout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.cemail{font-family:'Merriweather',serif;font-size:1.3rem;font-weight:400;color:#1b3a5c;display:inline-block;margin-bottom:22px;border-bottom:2px solid #1b3a5c;padding-bottom:4px;transition:opacity .2s;text-decoration:none;}
+.cemail:hover{opacity:.65;}
+.cbtns{display:flex;gap:12px;flex-wrap:wrap;}
+.cilist{display:flex;flex-direction:column;gap:12px;margin-top:28px;}
+.cicard{background:#fff;border:1px solid #d8e2ec;border-radius:8px;padding:15px 18px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 2px 8px rgba(27,58,92,.07);transition:transform .25s,box-shadow .25s;}
+.cicard:hover{transform:translateX(5px);border-left:3px solid #1b3a5c;box-shadow:0 6px 24px rgba(27,58,92,.11);}
+.ci-ico{width:38px;height:38px;border-radius:8px;background:#e8f1f8;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.ci-lbl{font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7890a0;margin-bottom:3px;}
+.ci-val{font-size:.9rem;font-weight:600;color:#1b3a5c;line-height:1.5;}
+.ci-val a{color:#1b3a5c;text-decoration:none;}
+.ci-val a:hover{text-decoration:underline;}
+.fcard{background:#fff;border:1px solid #d8e2ec;border-radius:14px;padding:36px;box-shadow:0 6px 24px rgba(27,58,92,.11);}
+.ft{font-family:'Merriweather',serif;font-size:1.3rem;font-weight:700;color:#1b3a5c;margin-bottom:4px;}
+.fs{font-size:.88rem;color:#445566;margin-bottom:24px;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.fg{margin-bottom:14px;}
+.fl{display:block;font-size:.78rem;font-weight:700;color:#2b3d4c;margin-bottom:6px;letter-spacing:.02em;}
+.fi{width:100%;padding:11px 14px;border:1.5px solid #d8e2ec;border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:#18232e;background:#f6f8fb;outline:none;transition:border .25s,background .25s;}
+.fi:focus{border-color:#1b3a5c;background:#fff;box-shadow:0 0 0 3px rgba(27,58,92,.07);}
+.fta{width:100%;padding:11px 14px;border:1.5px solid #d8e2ec;border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:#18232e;background:#f6f8fb;outline:none;resize:vertical;min-height:110px;transition:border .25s,background .25s;}
+.fta:focus{border-color:#1b3a5c;background:#fff;box-shadow:0 0 0 3px rgba(27,58,92,.07);}
+.fsel{width:100%;padding:11px 14px;border:1.5px solid #d8e2ec;border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:#18232e;background:#f6f8fb;outline:none;cursor:pointer;transition:border .25s;}
+.fsel:focus{border-color:#1b3a5c;}
+.fsub{width:100%;padding:14px;background:#1b3a5c;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:6px;transition:all .25s;letter-spacing:.02em;}
+.fsub:hover{background:#224a6e;transform:translateY(-1px);box-shadow:0 6px 18px rgba(27,58,92,.25);}
+@media(max-width:960px){.clayout{grid-template-columns:1fr;gap:48px;}.fr{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nb-inner">
+    <a href="index.html" class="nb-logo">Bansi Patel</a>
+    <ul class="nb-links" id="nbMenu">
+      <li><a href="index.html"><span class="ico">🏠</span>Home</a></li>
+      <li><a href="about.html"><span class="ico">👤</span>About</a></li>
+      <li><a href="skills.html"><span class="ico">🛠</span>Skills</a></li>
+      <li><a href="posts.html"><span class="ico">📌</span>Posts</a></li>
+      <li><a href="newsletter.html"><span class="ico">📰</span>Newsletter</a></li>
+    </ul>
+    <a href="contact.html" class="nb-cta active" style="background:#224a6e;">✉&nbsp;Contact</a>
+    <div class="nb-ham" id="nbHam"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<main>
+<div class="banner">
+  <div class="bw">
+    <div class="bcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <h1>Let's <em>Connect</em></h1>
+    <p class="bsub">Whether you are looking to collaborate on HR strategy, organizational design, or simply have a conversation about the future of work, I would love to hear from you.</p>
+  </div>
+</div>
+<section class="sec">
+  <div class="w">
+    <div class="clayout">
+      <div data-sr="left">
+        <div class="slabel">Get In Touch</div>
+        <h2 class="sh">Ready to Build<br><em>Something Great?</em></h2>
+        <p class="sdesc" style="margin-bottom:22px">Open to collaborations, consulting engagements, speaking opportunities, and professional conversations around strategic HR and people management.</p>
+        <a href="mailto:hrrecruiter.b07@gmail.com" class="cemail">hrrecruiter.b07@gmail.com</a>
+        <div class="cbtns">
+          <a href="mailto:hrrecruiter.b07@gmail.com" class="btn btn-n">✉ Send an Email</a>
+          <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-o">LinkedIn Profile</a>
+        </div>
+        <div class="cilist">
+          <div class="cicard" data-sr="up" data-d1><div class="ci-ico">✉</div><div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:hrrecruiter.b07@gmail.com">hrrecruiter.b07@gmail.com</a></div></div></div>
+          <div class="cicard" data-sr="up" data-d2><div class="ci-ico">🔗</div><div><div class="ci-lbl">LinkedIn</div><div class="ci-val"><a href="https://linkedin.com/in/bansi-patel-hr" target="_blank">linkedin.com/in/bansi-patel-hr</a></div></div></div>
+          <div class="cicard" data-sr="up" data-d3><div class="ci-ico">📍</div><div><div class="ci-lbl">Location</div><div class="ci-val">Ahmedabad, Gujarat, India</div></div></div>
+          <div class="cicard" data-sr="up" data-d4><div class="ci-ico">💼</div><div><div class="ci-lbl">Specialization</div><div class="ci-val">HR Manager · Organizational Development · Strategic HR · People and Culture</div></div></div>
+          <div class="cicard" data-sr="up" data-d5><div class="ci-ico">🕐</div><div><div class="ci-lbl">Response Time</div><div class="ci-val">Within 24 to 48 hours</div></div></div>
+        </div>
+      </div>
+      <div class="fcard" data-sr="right">
+        <div class="ft">Send a Message</div>
+        <p class="fs">Fill in the form and I will get back to you as soon as possible.</p>
+        <form onsubmit="doSubmit(event)">
+          <div class="fr">
+            <div><label class="fl">First Name</label><input class="fi" type="text" id="fn" placeholder="Your first name" required></div>
+            <div><label class="fl">Last Name</label><input class="fi" type="text" id="ln" placeholder="Your last name" required></div>
+          </div>
+          <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" id="em" placeholder="your@email.com" required></div>
+          <div class="fg">
+            <label class="fl">Subject</label>
+            <select class="fsel" id="sub">
+              <option value="">Select a topic...</option>
+              <option>HR Consulting and Strategy</option>
+              <option>Organizational Development</option>
+              <option>Speaking Opportunity</option>
+              <option>Collaboration</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Message</label><textarea class="fta" id="msg" placeholder="Tell me how I can help you..." required></textarea></div>
+          <button type="submit" class="fsub">Send Message ✉</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="ftbody">
+    <div><div class="ftbrand">Bansi Patel</div><p class="ftag">HR Manager helping organizations grow through strategic people management, inclusive culture building, and data-driven HR practices.</p><div class="fsocrow"><a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="fsoc">in</a><a href="mailto:hrrecruiter.b07@gmail.com" class="fsoc">✉</a></div></div>
+    <div><div class="fctitle">Navigate</div><ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="skills.html">Skills</a></li><li><a href="posts.html">Posts</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="fctitle">Expertise</div><ul class="flinks"><li><a href="skills.html">Talent Development</a></li><li><a href="skills.html">Performance Management</a></li><li><a href="skills.html">Organizational Development</a></li><li><a href="skills.html">Employee Engagement</a></li><li><a href="skills.html">Leadership Development</a></li></ul></div>
+    <div><div class="fctitle">Contact</div><ul class="flinks"><li><a href="mailto:hrrecruiter.b07@gmail.com">hrrecruiter.b07@gmail.com</a></li><li><a href="https://linkedin.com/in/bansi-patel-hr" target="_blank">linkedin.com/in/bansi-patel-hr</a></li><li style="color:rgba(255,255,255,.22);font-size:.8rem;margin-top:4px;cursor:default">Ahmedabad, Gujarat, India</li></ul></div>
+  </div>
+  <div class="ftbot"><span class="ftcopy">© 2025 Bansi Patel. All rights reserved.</span><div class="ftbotlinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div>
+</footer>
+<script>
+document.getElementById('nbHam').addEventListener('click',function(){document.getElementById('nbMenu').classList.toggle('open');});
+document.querySelectorAll('.nb-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nbMenu').classList.remove('open');});});
+(function(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});},{threshold:0.1});document.querySelectorAll('[data-sr]').forEach(function(el){obs.observe(el);});})();
+function doSubmit(e){
+  e.preventDefault();
+  var n=document.getElementById('fn').value+' '+document.getElementById('ln').value;
+  var em=document.getElementById('em').value;
+  var s=document.getElementById('sub').value||'Website Enquiry';
+  var m=document.getElementById('msg').value;
+  window.location.href='mailto:hrrecruiter.b07@gmail.com?subject='+encodeURIComponent(s+' from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+'\nEmail: '+em);
+}
+</script>
+</body>
+</html>

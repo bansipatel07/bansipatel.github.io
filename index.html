@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bansi Patel — HR Manager &amp; People Strategist</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{background:var(--navy);min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero-ring{position:absolute;right:-90px;top:50%;transform:translateY(-50%);width:580px;height:580px;border-radius:50%;border:1px solid rgba(74,141,181,.1);pointer-events:none;}
+.hero-ring::before{content:'';position:absolute;inset:80px;border-radius:50%;border:1px solid rgba(74,141,181,.07);}
+.hero-ring::after{content:'';position:absolute;inset:160px;border-radius:50%;border:1px solid rgba(74,141,181,.05);}
+.hero-slash{position:absolute;right:-5%;top:-20%;width:50%;height:140%;background:rgba(255,255,255,.018);clip-path:polygon(16% 0%,100% 0%,100% 100%,0% 100%);pointer-events:none;}
+.hero-wrap{max-width:1200px;margin:0 auto;width:100%;padding:110px 44px 90px;display:grid;grid-template-columns:1fr 400px;gap:70px;align-items:center;position:relative;z-index:2;}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px;opacity:0;animation:hFadeUp .8s .1s ease forwards;}
+.h-dot{width:7px;height:7px;border-radius:50%;background:var(--steel);animation:hPulse 2.2s ease-in-out infinite;}
+@keyframes hPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.25;transform:scale(.7);}}
+.h-eyetxt{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);}
+h1.hero-h1{font-family:'Merriweather',serif;font-size:clamp(2.1rem,4vw,3.4rem);font-weight:900;line-height:1.18;color:#fff;letter-spacing:-.02em;margin-bottom:20px;opacity:0;animation:hFadeUp .9s .2s ease forwards;}
+h1.hero-h1 .hl{color:#7ab8dc;}
+h1.hero-h1 em{font-style:italic;font-weight:300;opacity:.78;}
+.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.56);line-height:1.78;margin-bottom:36px;font-weight:300;max-width:460px;opacity:0;animation:hFadeUp .9s .35s ease forwards;}
+.hero-desc strong{color:rgba(255,255,255,.84);font-weight:600;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:50px;opacity:0;animation:hFadeUp .9s .5s ease forwards;}
+.btn-hw{background:#fff;color:var(--navy);padding:13px 28px;border-radius:var(--r);font-size:.9rem;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.14);transition:all .25s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-hw:hover{background:var(--navy-pale);transform:translateY(-2px);}
+.btn-hg{border:1.5px solid rgba(255,255,255,.24);color:rgba(255,255,255,.8);padding:12px 26px;border-radius:var(--r);font-size:.9rem;font-weight:500;background:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-hg:hover{border-color:rgba(255,255,255,.55);color:#fff;}
+.hero-stats{display:flex;gap:0;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);opacity:0;animation:hFadeUp .9s .65s ease forwards;}
+.hs{padding-right:34px;margin-right:34px;border-right:1px solid rgba(255,255,255,.08);}
+.hs:last-child{border-right:none;}
+.hs-n{font-family:'Merriweather',serif;font-size:2.1rem;font-weight:700;color:#fff;line-height:1;}
+.hs-n sup{font-size:.95rem;color:var(--steel);}
+.hs-l{font-size:.68rem;color:rgba(255,255,255,.36);text-transform:uppercase;letter-spacing:.07em;margin-top:5px;}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:28px;opacity:0;animation:hSlideIn .9s .28s ease forwards;}
+@keyframes hSlideIn{from{opacity:0;transform:translateX(36px);}to{opacity:1;transform:none;}}
+@keyframes hFadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+.hc-head{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px;}
+.hc-row{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.hc-row:last-child{border-bottom:none;}
+.hc-ico{width:36px;height:36px;border-radius:8px;background:rgba(74,141,181,.14);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+.hc-lbl{font-size:.65rem;color:rgba(255,255,255,.33);margin-bottom:2px;}
+.hc-val{font-size:.87rem;font-weight:600;color:rgba(255,255,255,.82);}
+.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.ic{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:28px;box-shadow:var(--sh-s);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;}
+.ic::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .38s;}
+.ic:hover{transform:translateY(-6px);box-shadow:var(--sh-l);}
+.ic:hover::after{transform:scaleX(1);}
+.ic-ico{font-size:1.65rem;margin-bottom:16px;}
+.ic-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.ic-desc{font-size:.85rem;color:var(--text-md);line-height:1.72;}
+.ic-link{font-size:.79rem;font-weight:700;color:var(--navy);margin-top:14px;display:inline-flex;align-items:center;gap:4px;text-decoration:none;transition:gap .2s;}
+.ic-link:hover{gap:8px;}
+@media(max-width:960px){.hero-wrap{grid-template-columns:1fr;padding:80px 20px 70px;gap:40px;}.hero-card{display:none;}.hero-stats{flex-wrap:wrap;gap:14px;}.hs{border-right:none;padding-right:0;margin-right:0;min-width:80px;}.intro-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+  <div class="hero-ring"></div>
+  <div class="hero-slash"></div>
+  <div class="hero-wrap">
+    <div>
+      <div class="hero-eyebrow"><span class="h-dot"></span><span class="h-eyetxt">HR Manager &amp; People Strategist · Ahmedabad, India</span></div>
+      <h1 class="hero-h1">Helping companies<br><span class="hl">reduce attrition</span><br>&amp; build <em>high-performance teams</em></h1>
+      <p class="hero-desc">Through <strong>strategic HR leadership</strong> with 4 plus years of experience, because when people thrive, organizations grow.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-hw">✉ Get In Touch</a>
+        <a href="about.html" class="btn-hg">Learn More About Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-n">4<sup>+</sup></div><div class="hs-l">Years Experience</div></div>
+        <div class="hs"><div class="hs-n">8<sup>+</sup></div><div class="hs-l">Core Skills</div></div>
+        <div class="hs"><div class="hs-n">5<sup>+</sup></div><div class="hs-l">HR Newsletters</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-head">Professional Profile</div>
+      <div class="hc-row"><div class="hc-ico">🎯</div><div><div class="hc-lbl">Current Role</div><div class="hc-val">HR Manager</div></div></div>
+      <div class="hc-row"><div class="hc-ico">🏗</div><div><div class="hc-lbl">Specialization</div><div class="hc-val">Organizational Development</div></div></div>
+      <div class="hc-row"><div class="hc-ico">📍</div><div><div class="hc-lbl">Location</div><div class="hc-val">Ahmedabad, Gujarat, India</div></div></div>
+      <div class="hc-row"><div class="hc-ico">✉</div><div><div class="hc-lbl">Email</div><div class="hc-val" style="font-size:.79rem">hrrecruiter.b07@gmail.com</div></div></div>
+      <div class="hc-row"><div class="hc-ico">🔗</div><div><div class="hc-lbl">LinkedIn</div><div class="hc-val" style="font-size:.79rem">bansi-patel-hr</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="t-label">Expertise in</span>
+    <div class="t-pills">
+      <span class="tpill"><i></i>Talent Development</span>
+      <span class="tpill"><i></i>Employee Engagement</span>
+      <span class="tpill"><i></i>Performance Management</span>
+      <span class="tpill"><i></i>Organizational Development</span>
+      <span class="tpill"><i></i>HR Policy Design</span>
+      <span class="tpill"><i></i>Leadership Development</span>
+    </div>
+  </div>
+</div>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div data-sr="up">
+      <div class="sec-label">What I Bring</div>
+      <h2 class="sh2">Three Pillars of <em>Strategic HR</em></h2>
+      <p class="sd">My work revolves around three core practices that together create organizations where people and performance thrive. Explore each area in detail on the Skills page.</p>
+    </div>
+    <div class="intro-grid">
+      <div class="ic" data-sr="up" data-d1>
+        <div class="ic-ico">👥</div>
+        <div class="ic-title">People &amp; Talent</div>
+        <p class="ic-desc">End-to-end talent management, from recruitment and onboarding through to succession planning and attrition reduction.</p>
+        <a href="skills.html" class="ic-link">View all skills →</a>
+      </div>
+      <div class="ic" data-sr="up" data-d2>
+        <div class="ic-ico">🎯</div>
+        <div class="ic-title">Strategy &amp; Leadership</div>
+        <p class="ic-desc">Translating business goals into actionable HR roadmaps covering performance management, organizational development, and change leadership.</p>
+        <a href="skills.html" class="ic-link">View all skills →</a>
+      </div>
+      <div class="ic" data-sr="up" data-d3>
+        <div class="ic-ico">🌍</div>
+        <div class="ic-title">Culture &amp; Analytics</div>
+        <p class="ic-desc">Shaping inclusive, high-performance cultures backed by HR analytics, workforce data, and evidence-based decision making.</p>
+        <a href="skills.html" class="ic-link">View all skills →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="metrics-band">
+  <div class="metrics-wrap">
+    <div class="m-item" data-sr="scale" data-d1><div class="m-num" data-count="4">4<sup>+</sup></div><div class="m-lbl">Years of Strategic HR</div><div class="m-bar"></div></div>
+    <div class="m-item" data-sr="scale" data-d2><div class="m-num" data-count="8">8<sup>+</sup></div><div class="m-lbl">Core Competencies</div><div class="m-bar"></div></div>
+    <div class="m-item" data-sr="scale" data-d3><div class="m-num" data-count="100">100<sup>%</sup></div><div class="m-lbl">People-Centered Approach</div><div class="m-bar"></div></div>
+    <div class="m-item" data-sr="scale" data-d4><div class="m-num" data-count="5">5<sup>+</sup></div><div class="m-lbl">HR Newsletters Published</div><div class="m-bar"></div></div>
+  </div>
+</div>
+
+<div class="cta-strip">
+  <h2 data-sr="up">Ready to Build Something Great Together?</h2>
+  <p data-sr="up" data-d1>Let's connect and explore how strategic HR can transform your organization's performance and culture.</p>
+  <a href="contact.html" class="btn btn-wh" data-sr="up" data-d2>✉ Get In Touch</a>
+</div>
+</main>
+<script src="shared.js"></script>
+</body>
+</html>

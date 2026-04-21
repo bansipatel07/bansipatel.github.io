@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bansi Patel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid{display:grid;grid-template-columns:290px 1fr;gap:72px;align-items:start;}
+.portrait-wrap{position:relative;}
+.portrait-svg{border-radius:14px;overflow:hidden;border:1px solid #d8e2ec;box-shadow:0 6px 24px rgba(27,58,92,.11);background:linear-gradient(160deg,#d0e4f0,#daeaf6);}
+.portrait-badge{position:absolute;bottom:-14px;right:-14px;background:#1b3a5c;border-radius:10px;padding:16px 20px;box-shadow:0 8px 24px rgba(27,58,92,.28);}
+.pb-n{font-family:'Merriweather',serif;font-size:1.75rem;font-weight:700;color:#fff;line-height:1;}
+.pb-n sup{font-size:.9rem;color:#4a8db5;}
+.pb-l{font-size:.66rem;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+.abody p{font-size:.97rem;color:#445566;line-height:1.85;margin-bottom:18px;}
+.abody p strong{color:#18232e;font-weight:600;}
+.pullquote{margin:22px 0;padding:20px 24px;border-left:4px solid #1b3a5c;background:#f6f8fb;border-radius:0 8px 8px 0;}
+.pullquote p{font-family:'Merriweather',serif;font-size:1.04rem;font-style:italic;color:#1b3a5c;line-height:1.6;}
+.abtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.sgrid4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px;}
+.scard4{background:#fff;border:1px solid #d8e2ec;border-radius:14px;padding:26px;box-shadow:0 2px 8px rgba(27,58,92,.07);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
+.scard4::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#1b3a5c;transform:scaleX(0);transform-origin:left;transition:transform .38s;}
+.scard4:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(27,58,92,.15);}
+.scard4:hover::before{transform:scaleX(1);}
+.sc4-ico{font-size:1.55rem;margin-bottom:12px;}
+.sc4-t{font-size:.9rem;font-weight:700;color:#1b3a5c;margin-bottom:6px;}
+.sc4-d{font-size:.83rem;color:#445566;line-height:1.65;}
+.jcols{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+.jvisual{display:flex;flex-direction:column;align-items:center;margin-top:32px;}
+.jnode{display:flex;flex-direction:column;align-items:center;width:100%;}
+.jcircle{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:3px solid #fff;box-shadow:0 4px 16px rgba(27,58,92,.18);}
+.jcircle.start{background:#ecf0f5;}
+.jcircle.end{background:#1b3a5c;}
+.jlabel{margin-top:12px;text-align:center;width:100%;max-width:270px;padding:16px 22px;border-radius:8px;}
+.jlabel.sl{background:#f6f8fb;border:1px solid #d8e2ec;}
+.jlabel.el{background:#1b3a5c;box-shadow:0 4px 18px rgba(27,58,92,.22);}
+.jl-role{font-size:.93rem;font-weight:700;color:#1b3a5c;margin-bottom:3px;}
+.jl-role.w{color:#fff;}
+.jl-desc{font-size:.8rem;color:#445566;line-height:1.5;}
+.jl-desc.w{color:rgba(255,255,255,.56);}
+.jcon{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 0;}
+.jline{width:2px;height:32px;background:linear-gradient(to bottom,#d8e2ec,#1b3a5c);border-radius:1px;}
+.jarrow{font-size:1.3rem;color:#1b3a5c;animation:bd 1.8s ease-in-out infinite;}
+@keyframes bd{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+.valstack{display:flex;flex-direction:column;gap:12px;}
+.vrow{padding:16px 20px;border-left:3px solid #1b3a5c;background:#f6f8fb;border-radius:0 8px 8px 0;transition:transform .25s,box-shadow .25s;}
+.vrow.alt{border-left-color:#4a8db5;background:#e8f1f8;}
+.vrow:hover{transform:translateX(5px);box-shadow:0 2px 8px rgba(27,58,92,.07);}
+.vt{font-size:.88rem;font-weight:700;color:#1b3a5c;margin-bottom:4px;}
+.vd{font-size:.82rem;color:#445566;line-height:1.6;}
+.footer-row{display:flex;flex-direction:column;gap:9px;}
+@media(max-width:960px){.about-grid{grid-template-columns:1fr;gap:40px;}.portrait-wrap{max-width:280px;}.sgrid4{grid-template-columns:1fr;}.jcols{grid-template-columns:1fr;gap:48px;}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nb-inner">
+    <a href="index.html" class="nb-logo">Bansi Patel</a>
+    <ul class="nb-links" id="nbMenu">
+      <li><a href="index.html"><span class="ico">🏠</span>Home</a></li>
+      <li><a href="about.html" class="active"><span class="ico">👤</span>About</a></li>
+      <li><a href="skills.html"><span class="ico">🛠</span>Skills</a></li>
+      <li><a href="posts.html"><span class="ico">📌</span>Posts</a></li>
+      <li><a href="newsletter.html"><span class="ico">📰</span>Newsletter</a></li>
+    </ul>
+    <a href="contact.html" class="nb-cta">✉&nbsp;Contact</a>
+    <div class="nb-ham" id="nbHam"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<main>
+<div class="banner">
+  <div class="bw">
+    <div class="bcrumb"><a href="index.html">Home</a><span>/</span>About</div>
+    <h1>About <em>Bansi Patel</em></h1>
+    <p class="bsub">HR Manager · Organizational Development · Strategic HR · People and Culture</p>
+  </div>
+</div>
+<section class="sec">
+  <div class="w">
+    <div class="about-grid">
+      <div data-sr="left">
+        <div class="portrait-wrap">
+          <div class="portrait-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 380" width="100%">
+              <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#cfe2f0"/><stop offset="100%" stop-color="#daeaf6"/></linearGradient>
+                <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5d0a0"/><stop offset="100%" stop-color="#e8b880"/></linearGradient>
+                <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1b3a5c"/><stop offset="100%" stop-color="#0f2233"/></linearGradient>
+              </defs>
+              <rect width="300" height="380" fill="url(#bg)"/>
+              <ellipse cx="150" cy="372" rx="155" ry="22" fill="rgba(27,58,92,.09)"/>
+              <path d="M55 380 L58 258 Q62 236 92 225 L132 213 L150 232 L168 213 L208 225 Q238 236 242 258 L245 380 Z" fill="url(#suit)"/>
+              <path d="M132 213 L150 238 L168 213 L160 206 L150 222 L140 206 Z" fill="#fff"/>
+              <path d="M132 213 L98 250 L130 244 Z" fill="#142e4a"/>
+              <path d="M168 213 L202 250 L170 244 Z" fill="#142e4a"/>
+              <rect x="136" y="192" width="28" height="24" rx="6" fill="url(#skin)"/>
+              <ellipse cx="150" cy="172" rx="52" ry="56" fill="url(#skin)"/>
+              <path d="M98 158 Q96 112 112 102 Q128 90 150 90 Q172 90 188 102 Q204 112 202 158 Q196 134 184 126 Q168 114 150 114 Q132 114 116 126 Q104 134 98 158 Z" fill="#2e1a0e"/>
+              <ellipse cx="150" cy="92" rx="26" ry="15" fill="#2e1a0e"/>
+              <ellipse cx="150" cy="88" rx="13" ry="9" fill="#3d2214"/>
+              <path d="M124 157 Q132 152 140 155" stroke="#2e1a0e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M160 155 Q168 152 176 157" stroke="#2e1a0e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="133" cy="166" rx="8" ry="6.5" fill="#fff"/>
+              <ellipse cx="167" cy="166" rx="8" ry="6.5" fill="#fff"/>
+              <circle cx="133" cy="166" r="4.8" fill="#1a0a04"/>
+              <circle cx="167" cy="166" r="4.8" fill="#1a0a04"/>
+              <circle cx="134.8" cy="164.2" r="1.4" fill="#fff"/>
+              <circle cx="168.8" cy="164.2" r="1.4" fill="#fff"/>
+              <path d="M147 176 Q150 184 153 176" stroke="#c07840" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M136 190 Q150 200 164 190" stroke="#b06040" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="150" cy="150" r="3" fill="#b02020"/>
+              <rect x="122" y="292" width="56" height="36" rx="5" fill="rgba(255,255,255,.14)"/>
+              <rect x="130" y="300" width="40" height="3" rx="1.5" fill="rgba(255,255,255,.55)"/>
+              <rect x="133" y="308" width="34" height="2.5" rx="1" fill="rgba(255,255,255,.3)"/>
+              <rect x="135" y="315" width="30" height="2" rx="1" fill="rgba(255,255,255,.22)"/>
+            </svg>
+          </div>
+          <div class="portrait-badge">
+            <div class="pb-n">4<sup>+</sup></div>
+            <div class="pb-l">Years HR Experience</div>
+          </div>
+        </div>
+      </div>
+      <div data-sr="right" class="abody">
+        <div class="slabel">About Me</div>
+        <h2 class="sh">People-First <em>HR Leader</em></h2>
+        <p>As an <strong>experienced HR Professional with 4 plus years</strong> of driving business growth through strategic Human Resource Management, I bring a holistic approach to building organizations from the inside out.</p>
+        <div class="pullquote"><p>"When you invest in people, you invest in the future of your entire organization."</p></div>
+        <p>Skilled in <strong>Talent Development, Employee Engagement, and Organizational Development</strong>, with a strong focus on aligning HR strategies with business goals. I specialize in building <strong>inclusive, high-performing workplace cultures</strong>, leveraging data-driven insights and HR best practices to implement impactful programs across talent management, employee relations, and performance optimization.</p>
+        <p>My approach is rooted in the belief that <strong>people are an organization's greatest competitive advantage</strong>. Every initiative I design and every policy I craft is guided by this conviction.</p>
+        <div class="abtns">
+          <a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="btn btn-n">View LinkedIn Profile</a>
+          <a href="contact.html" class="btn btn-o">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="w">
+    <div data-sr="up"><div class="slabel">Core Strengths</div><h2 class="sh">What Sets Me <em>Apart</em></h2></div>
+    <div class="sgrid4">
+      <div class="scard4" data-sr="flip" data-d1><div class="sc4-ico">🎯</div><div class="sc4-t">Strategic HR Alignment</div><p class="sc4-d">Bridging people strategy and business goals, translating organizational vision into actionable HR programs that deliver measurable results.</p></div>
+      <div class="scard4" data-sr="flip" data-d2><div class="sc4-ico">🌱</div><div class="sc4-t">Talent Development</div><p class="sc4-d">Designing learning ecosystems and leadership pipelines that nurture talent from hire to retire, creating a culture of continuous growth.</p></div>
+      <div class="scard4" data-sr="flip" data-d3><div class="sc4-ico">🤝</div><div class="sc4-t">Culture and Engagement</div><p class="sc4-d">Building psychologically safe, inclusive workplaces grounded in trust, transparency, and a genuine commitment to employee wellbeing.</p></div>
+      <div class="scard4" data-sr="flip" data-d4><div class="sc4-ico">📊</div><div class="sc4-t">Data-Driven HR</div><p class="sc4-d">Moving from intuition-based to evidence-based HR decision making using analytics, engagement data, and workforce metrics.</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="w">
+    <div class="jcols">
+      <div data-sr="left">
+        <div class="slabel">My Journey</div>
+        <h2 class="sh">From Recruiter <em>to HR Manager</em></h2>
+        <p class="sdesc" style="margin-bottom:32px">A career built on a genuine passion for people, growing from hands-on recruitment into strategic HR leadership over 4 plus years.</p>
+        <div class="jvisual">
+          <div class="jnode">
+            <div class="jcircle start">🔍</div>
+            <div class="jlabel sl">
+              <div class="jl-role">Recruiter</div>
+              <p class="jl-desc">Where it all began. Sourcing and connecting the right talent with the right opportunity, with a deep passion for people.</p>
+            </div>
+          </div>
+          <div class="jcon"><div class="jline"></div><span class="jarrow">↓</span><div class="jline"></div></div>
+          <div class="jnode">
+            <div class="jcircle end">🏆</div>
+            <div class="jlabel el">
+              <div class="jl-role w">HR Manager</div>
+              <p class="jl-desc w">Leading organizational development, performance management, and strategic people initiatives at a senior level.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-sr="right">
+        <div class="slabel">My Values</div>
+        <h2 class="sh">What I <em>Believe In</em></h2>
+        <p class="sdesc" style="margin-bottom:26px">The principles that guide every HR decision I make and every culture I help build.</p>
+        <div class="valstack">
+          <div class="vrow" data-sr="up" data-d1><div class="vt">People Before Process</div><p class="vd">Policies and processes serve people, never the other way around. HR must remain human-centered at its core.</p></div>
+          <div class="vrow alt" data-sr="up" data-d2><div class="vt">Inclusion is Non-Negotiable</div><p class="vd">Diverse teams outperform. Building inclusive workplaces is both an ethical and a business imperative.</p></div>
+          <div class="vrow" data-sr="up" data-d3><div class="vt">Data Guides, Empathy Leads</div><p class="vd">Analytics tell us the what. Empathy tells us the why. Great HR professionals need both to make a lasting difference.</p></div>
+          <div class="vrow alt" data-sr="up" data-d4><div class="vt">Continuous Learning</div><p class="vd">The best HR leaders never stop learning about their people, their industry, and themselves.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="ftbody">
+    <div><div class="ftbrand">Bansi Patel</div><p class="ftag">HR Manager helping organizations grow through strategic people management, inclusive culture building, and data-driven HR practices.</p><div class="fsocrow"><a href="https://linkedin.com/in/bansi-patel-hr" target="_blank" class="fsoc">in</a><a href="mailto:hrrecruiter.b07@gmail.com" class="fsoc">✉</a></div></div>
+    <div><div class="fctitle">Navigate</div><ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="skills.html">Skills</a></li><li><a href="posts.html">Posts</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="fctitle">Expertise</div><ul class="flinks"><li><a href="skills.html">Talent Development</a></li><li><a href="skills.html">Performance Management</a></li><li><a href="skills.html">Organizational Development</a></li><li><a href="skills.html">Employee Engagement</a></li><li><a href="skills.html">Leadership Development</a></li></ul></div>
+    <div><div class="fctitle">Contact</div><ul class="flinks"><li><a href="mailto:hrrecruiter.b07@gmail.com">hrrecruiter.b07@gmail.com</a></li><li><a href="https://linkedin.com/in/bansi-patel-hr" target="_blank">linkedin.com/in/bansi-patel-hr</a></li><li style="color:rgba(255,255,255,.22);font-size:.8rem;margin-top:4px;cursor:default">Ahmedabad, Gujarat, India</li></ul></div>
+  </div>
+  <div class="ftbot"><span class="ftcopy">© 2025 Bansi Patel. All rights reserved.</span><div class="ftbotlinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div>
+</footer>
+<script>
+document.getElementById('nbHam').addEventListener('click',function(){document.getElementById('nbMenu').classList.toggle('open');});
+document.querySelectorAll('.nb-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nbMenu').classList.remove('open');});});
+(function(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});},{threshold:0.1});document.querySelectorAll('[data-sr]').forEach(function(el){obs.observe(el);});})();
+</script>
+</body>
+</html>
